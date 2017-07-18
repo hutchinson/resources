@@ -29,7 +29,7 @@ Plug 'qpkorr/vim-bufkill'
 Plug 'ctrlpvim/ctrlp.vim'
 
 " YouCompleteMe
-" Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 
 " Initialize plugin system
 call plug#end()
