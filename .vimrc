@@ -29,7 +29,10 @@ Plug 'qpkorr/vim-bufkill'
 Plug 'ctrlpvim/ctrlp.vim'
 
 " YouCompleteMe
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer' }
+
+" TagBar
+Plug 'majutsushi/tagbar'
 
 " Initialize plugin system
 call plug#end()
@@ -124,6 +127,23 @@ set expandtab
 " Glaive
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 autocmd VimEnter * Glaive codefmt clang_format_executable='/home/dan.hutchinson/tools/llvm/4.01/llvm/build_dir/bin/clang-format'
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" YouCompleteMe
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:ycm_global_ycm_extra_conf = '~/dev_resources/.ycm_extra_conf.py' 
+
+let g:ycm_python_binary_path='/usr/bin/python'
+
+let g:ycm_server_use_vim_stdout = 1
+let g:ycm_server_keep_logfiles = 1
+let g:ycm_server_log_level = 'debug'
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" TagBar
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+autocmd VimEnter * TagbarOpen
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Key Bindings
