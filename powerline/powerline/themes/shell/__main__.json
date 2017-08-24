@@ -1,0 +1,19 @@
+{
+	"segment_data": {
+		"hostname": {
+			"args": {
+			}
+		},
+		"internal_ip": {
+			"args": {
+                          "interface": "eno1",
+                          "ipv":4
+			}
+		},
+		"cwd": {
+			"args": {
+				"dir_limit_depth": 3
+			}
+		}
+	}
+}
